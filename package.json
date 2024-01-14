@@ -20,7 +20,8 @@
     "build": "tsup src/index.ts --out-dir lib --format esm --clean",
     "dev": "tsx watch src/index.ts",
     "lint": "eslint src",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "tsc --noEmit"
   },
   "lint-staged": {
     "*": [
