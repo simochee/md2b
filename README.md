@@ -1,10 +1,10 @@
 #
 
-[![npm version](https://badge.fury.io/js/PACKAGE_NAME.svg)](https://badge.fury.io/js/PACKAGE_NAME)
-[![License](https://img.shields.io/npm/l/PACKAGE_NAME)](https://github.com/simochee/PACKAGE_NAME/blob/main/LICENSE)
-[![Release](https://github.com/simochee/PACKAGE_NAME/actions/workflows/release.yaml/badge.svg)](https://github.com/simochee/PACKAGE_NAME/actions/workflows/release.yaml)
+[![npm version](https://badge.fury.io/js/zenn-books-publishing.svg)](https://badge.fury.io/js/zenn-books-publishing)
+[![License](https://img.shields.io/npm/l/zenn-books-publishing)](https://github.com/simochee/zenn-books-publishing/blob/main/LICENSE)
+[![Release](https://github.com/simochee/zenn-books-publishing/actions/workflows/release.yaml/badge.svg)](https://github.com/simochee/zenn-books-publishing/actions/workflows/release.yaml)
 
-PACKAGE_DESCRIPTION
+Building Zenn Books for Publishing
 
 ## 🧩 Features
 
@@ -14,13 +14,13 @@ PACKAGE_DESCRIPTION
 
 ```shell
 # npm
-npm install -D PACKAGE_NAME
+npm install -D zenn-books-publishing
 
 # yarn
-yarn add -D PACKAGE_NAME
+yarn add -D zenn-books-publishing
 
 # pnpm
-pnpm add -D PACKAGE_NAME
+pnpm add -D zenn-books-publishing
 ```
 
 ## 🧑‍💻 Usage

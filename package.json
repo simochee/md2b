@@ -1,9 +1,9 @@
 {
-  "name": "PACKAGE_NAME",
-  "description": "PACKAGE_DESCRIPTION",
+  "name": "zenn-books-publishing",
+  "description": "Building Zenn Books for Publishing",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/simochee/PACKAGE_NAME.git"
+    "url": "git+https://github.com/simochee/zenn-books-publishing.git"
   },
   "license": "MIT",
   "author": {
