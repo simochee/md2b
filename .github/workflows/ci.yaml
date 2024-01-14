@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: package.json
+      - name: enable pnpm
+        run: corepack enable
+      - name: install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: run lint
+        run: pnpm run lint
+      - name: run test
+        run: pnpm run test
+      - name: run build
+        run: pnpm run build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: release-artifact
+          path: lib
+
+  release:
+    if: github.ref == 'refs/heads/main'
+    needs: check
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: package.json
+      - uses: actions/download-artifact@v4
+        with:
+          name: release-artifact
+          path: lib
+      - name: release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
+        run: npx semantic-release

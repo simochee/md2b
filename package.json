@@ -1,0 +1,62 @@
+{
+  "name": "PACKAGE_NAME",
+  "description": "PACKAGE_DESCRIPTION",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simochee/PACKAGE_NAME.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "simochee",
+    "email": "lollipop@simochee.net",
+    "url": "https://simochee.net"
+  },
+  "type": "module",
+  "bin": "./lib/index.mjs",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --out-dir lib --format esm --clean",
+    "dev": "tsx watch src/index.ts",
+    "lint": "eslint src",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*": [
+      "prettier --write --ignore-unknown"
+    ]
+  },
+  "release": {
+    "branches": [
+      {
+        "name": "main",
+        "prerelease": true
+      }
+    ]
+  },
+  "dependencies": {
+    "tsup": "^8.0.1",
+    "tsx": "^4.7.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.4.4",
+    "@commitlint/config-conventional": "^18.4.4",
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@tsconfig/node20": "^20.1.2",
+    "@types/node": "^20.11.0",
+    "@typescript-eslint/eslint-plugin": "^6.18.1",
+    "@typescript-eslint/parser": "^6.18.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-unicorn": "^50.0.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.2.2",
+    "prettier-plugin-packagejson": "^2.4.9",
+    "typescript": "^5.3.3"
+  },
+  "packageManager": "pnpm@9.0.0-alpha.0+sha256.73ada1a82ae5a62c3da44e4841e56d471a5f52a48590b212ea04466923689e3b",
+  "volta": {
+    "node": "20.11.0"
+  }
+}
