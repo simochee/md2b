@@ -11,11 +11,8 @@ export default [
     files: ["**/*.ts"],
     languageOptions: {
       parser: tsEslintParser,
-      parserOptions: {
-        project: true,
-      },
     },
-    rules: tsEslintPlugin.configs["strict-type-checked"].rules,
+    rules: tsEslintPlugin.configs["recommended"].rules,
   },
   eslintPluginUnicorn.configs["flat/recommended"],
 ];

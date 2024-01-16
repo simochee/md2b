@@ -1,3 +1,4 @@
 #!/usr/bin/env node
+import { main } from "~/main";
 
-console.log("cli ready");
+await main();
